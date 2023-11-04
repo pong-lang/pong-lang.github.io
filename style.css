@@ -1,0 +1,84 @@
+.container {
+    text-align: center;
+}
+
+#output {
+    text-align: left;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.DisassemblyBox {
+    border: #626262 solid 2px;
+    border-radius: 6px;
+    overflow-y: auto;
+    height: 70vh;
+}
+
+.style_hex {
+    color: #D69D85;
+}
+
+.style_keyword {
+    color: #569CD6;
+}
+
+.style_type {
+    color: #B5CEA8;
+}
+
+.style_error {
+    color: #d92828;
+}
+
+.style_addr {
+    color: #d27cd1;
+}
+
+.no_select {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#footer {
+    position: fixed;
+    height: 30px;
+    background-color: #6f42c1; !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+    border-radius: 35px;
+    text-align: center;
+    color: #fff;
+}
+
+.small {
+    font-size: x-small;
+}
+
+.btn-purple {
+    background-color: #6f42c1;
+    border-color: #6136b0;
+    transition: .2s ease-in-out 0s;
+}
+
+.btn-purple:hover {
+    background-color: #432777;
+    border-color: #41217a;
+    transform: scale(1.05);
+}
+
+.btn-purple:active {
+    background-color: #2c1b4d;
+    border-color: #241342;
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #181a1b;
+    color: #ddd;
+}
