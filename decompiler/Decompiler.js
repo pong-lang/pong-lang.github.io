@@ -285,7 +285,7 @@ class Decompiler
 
             this.output =
                 "<pre><h2>Displaying Disassembly</h2><div class=\"DisassemblyBox\">" +
-                "<span class='no_select'>Addr\tOp\tDisassembled</span><hr>" + //There has to be a neater way of this no?
+                "<span class='no_select'>Addr\tOp\tDisassembled</span><hr>" +
                 this.output +
                 "</div></pre>";
         }
