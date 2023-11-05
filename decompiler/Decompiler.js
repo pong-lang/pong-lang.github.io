@@ -452,7 +452,7 @@ class Decompiler
             case 0x1125:
             {
                 this.WriteKeyword("mov");
-                this.WriteAsHex(this.ReadUShort());
+                this.ProcessOffset();
                 this.output += ", ";
 
                 this.WriteKeyword("pop");
@@ -498,6 +498,14 @@ class Decompiler
                 this.WriteVarName(this.ReadUShort());
                 this.output += ", ";
                 this.WriteKeyword("pop");
+                break;
+            }
+            case 0x1204:
+            {
+                this.WriteKeyword("ptr");
+                this.WriteVarName(this.ReadUShort());
+                this.output += ", ";
+                this.ProcessOffset();
                 break;
             }
             
