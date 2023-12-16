@@ -231,11 +231,13 @@ class Decompiler
             case 0x0ac0:
             {
                 this.WriteKeyword("cmp");
+                this.WriteAsHex(this.ReadUShort());
                 break;
             }
             case 0x0ac1:
             {
                 this.WriteKeyword("ncmp");
+                this.WriteAsHex(this.ReadUShort());
                 break;
             }
 
@@ -363,6 +365,17 @@ class Decompiler
                 break;
             }
 
+            case 0x1130:
+            {
+                this.WriteKeyword("mvreg ");
+                let reg = this.ReadUShort();
+                this.WriteAsHex(reg);
+                this.output += ", "
+                let value = this.ReadUShort();
+                this.WriteAsHex(value, 2);
+                break;
+            }
+            
             case 0x1110:
             case 0x1111:
             case 0x1112:
@@ -550,6 +563,17 @@ class Decompiler
                 break;
             }
             
+            case 0x2200:
+            {
+                this.WriteKeyword("tou8");
+                break;
+            }
+            case 0x2201:
+            {
+                this.WriteKeyword("tou16");
+                break;
+            }
+            
             case 0xFFF0:
             {
                 this.WriteKeyword("drop");
@@ -593,7 +617,7 @@ class Decompiler
             
             default:
             {
-                this.output += "unknown";
+                this.output += "<span class='style_error'>unknown</span>";
                 break;
             }
         }
